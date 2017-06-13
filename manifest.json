@@ -9,9 +9,15 @@
    "default_icon": "icon.png",
    "default_popup": "popup.html"
   },
+  "background": {
+    "scripts": ["background.js"]
+  },
   "permissions": [
    "activeTab",
    "storage",
-   "tabs"
+   "tabs",
+   "activeTab",
+   "http://*/",
+   "https://*/"
    ]
 }

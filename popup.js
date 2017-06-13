@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   chrome.tabs.query({active: true},function(tab) {
     var url = tab[0].url;
-    console.log("Here am i: " + url);
 
     chrome.storage.sync.get(url, function(theValue) {
       if (theValue[url] != undefined) {
@@ -22,12 +21,18 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('No value specified');
         return;
       }
-      // Save it using the Chrome extension storage API.
-      var keypair = {};
-      keypair[url] = theValue;
-      chrome.storage.sync.set(keypair, function() {
-        // Notify that we saved.
-        console.log('SAVING ' + JSON.stringify({url: theValue}));
+
+      chrome.tabs.executeScript({
+        code: theValue
+      }, function(results) {
+
+        // Save it using the Chrome extension storage API.
+        var keypair = {};
+        keypair[url] = theValue;
+        chrome.storage.sync.set(keypair, function() {
+          // Notify that we saved.
+          console.log('SAVING ' + JSON.stringify(keypair));
+        });
       });
     }, false);
   });
