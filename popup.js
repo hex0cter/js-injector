@@ -18,24 +18,26 @@ document.addEventListener('DOMContentLoaded', function() {
     injectButton.addEventListener('click', function() {
       var theValue = textarea.value;
       if (!theValue) {
-        console.log('No value specified');
+        chrome.storage.sync.remove(url, function() {
+          // Notify that we saved.
+          console.log('REMOVED script for ' + url);
+        });
+        window.close();
         return;
       }
 
       chrome.tabs.executeScript({
         code: theValue
-      }, function(results) {
-
-        // Save it using the Chrome extension storage API.
-        var keypair = {};
-        keypair[url] = theValue;
-        chrome.storage.sync.set(keypair, function() {
-          // Notify that we saved.
-          console.log('SAVING ' + JSON.stringify(keypair));
-        });
       });
+
+      // Save it using the Chrome extension storage API.
+      var keypair = {};
+      keypair[url] = theValue;
+      chrome.storage.sync.set(keypair, function() {
+        // Notify that we saved.
+        console.log('SAVED ' + JSON.stringify(keypair));
+      });
+      window.close();
     }, false);
   });
-
-
 }, false);

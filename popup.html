@@ -5,15 +5,7 @@
     <script src="popup.js"></script>
   </head>
   <body>
-    <textarea id="jscode">
-posslinks = document.getElementsByTagName("td");
-for (var plinkid = 0; plinkid < posslinks.length; plinkid++) {
-    if (posslinks[plinkid].innerHTML.startsWith("https://")) {
-        posslinks[plinkid].innerHTML =
-           "<a href='" + posslinks[plinkid].innerHTML + "'>" +
-           posslinks[plinkid].innerHTML + "</a>"
-    }
-}</textarea>
+    <textarea id="jscode"></textarea>
     <button id="inject">Update</button>
   </body>
 </html>
