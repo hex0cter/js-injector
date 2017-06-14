@@ -38,6 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('SAVED ' + JSON.stringify(keypair));
       });
       window.close();
-    }, false);
+    });
   });
-}, false);
+});

@@ -1,6 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Javascript Injector",
+  "author": "Daniel Han",
   "short_name": "JS injector",
   "description": "Inject javascript to the webpage you are visiting",
   "version": "1.1",
@@ -15,6 +16,7 @@
    "default_title": "Javascript Injector",
    "default_popup": "popup.html"
   },
+  "default_locale": "en",
   "background": {
     "scripts": ["background.js"]
   },
