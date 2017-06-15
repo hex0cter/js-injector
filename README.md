@@ -1,8 +1,8 @@
-# js-injector
-Chrome extension for injecting javascript to the webpage you are visiting
+# javascript-injector
+Chrome extension for injecting javascript to the webpage you are visiting.
 
 ## Install
-You can install the extension from [here](https://chrome.google.com/webstore/detail/javascript-injector/ejnccfcackblkelbafbolcpjfpcmbplg).
+You can install the extension from [chrome web store](https://chrome.google.com/webstore/detail/javascript-injector/ejnccfcackblkelbafbolcpjfpcmbplg).
 
 ## License
 
