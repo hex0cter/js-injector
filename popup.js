@@ -1,5 +1,4 @@
 // Storage Documentation: https://developer.chrome.com/extensions/storage
-
 document.addEventListener('DOMContentLoaded', function() {
   var textarea = document.getElementById('jscode');
   var injectButton = document.getElementById('inject');
