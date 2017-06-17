@@ -12,7 +12,7 @@ Let's say you want to run a small piece of javascript in your favorite web site 
 
 * Click on the javascript-injector extension right to the address bar, and fill in the javascript below
 ```javascript
-document.body.style.backgroundColor = "pink";
+document.body.style.backgroundColor = "lightblue";
 ```
 
 ![alt text](https://raw.githubusercontent.com/hex0cter/js-injector/master/publisher/screenshots/SS2.png "fill in the javascript")
